@@ -38,15 +38,13 @@ public class User {
 
     }
 
-    public void transfer(){
+    public void transfer(int transfer){
         System.out.println("Enter a card number :");
         int cardNumber=sc.nextInt();
         if(cardNumber==managemant.getCardNumber()) {
-            System.out.println("How much you want to transfer:");
-            int transfer = sc.nextInt();
             if(transfer<=balance){
                 balance-=transfer;
-                managemant.transaction(transfer);
+      
 
             }else {
                 System.out.println("Not enough balance to complete the operation");
