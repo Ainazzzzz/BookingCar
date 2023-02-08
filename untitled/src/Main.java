@@ -140,7 +140,18 @@ class Main {
                                    if(choice1==1) {
                                        bankAcc[i].deposit();
                                    } else if(choice1==2) {
-                                       bankAcc[i].transfer();
+                                        System.out.println("How much you want to transfer:");
+                                       int transfer = sc.nextInt();
+                                       bankAcc[i].transfer( transfer);
+                                       if(transfer<= cars[i].getPrice()) {
+                                          int b= bankAcc[i].getBalance();
+                                          b+= transfer;
+                                          bankAcc[i].setBalance(b);
+                                           System.out.println("YOU SUCCESSFULLY BOOKED THE CAR!!!");
+                                       }else {
+                                           int t= (int) (cars[i].getPrice()-transfer);
+                                           System.out.println("Car price is"+cars[i].getPrice());
+                                           System.out.println(t + " Left to pay/try again");
                                    } else if (choice1==3) {
                                        System.out.println("Your balance is " + bankAcc[i].getBalance());
                                    } else if (choice1==4) {
