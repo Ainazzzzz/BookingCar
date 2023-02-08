@@ -13,19 +13,7 @@ public class Managemant  {
 
 
 
-    public void transaction(int transfer) {
-        for (int i = 0; i <cars.length; i++) {
-
-        if(transfer<=cars[i].getPrice()) {
-            balance += transfer;
-            System.out.println("YOU SUCCESSFULLY BOOKED THE CAR!!!");
-        }else {
-            int t= (int) (cars[i].getPrice()-transfer);
-            System.out.println("Car price is"+cars[i].getPrice());
-            System.out.println(t + " Left to pay/try again");
-        }
-
-    }}
+  
     public long getCardNumber() {
         return cardNumber;
     }
